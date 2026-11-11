@@ -1,21 +1,378 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>E-Planet Hub | Your One-Stop Destination for Electric Mobility.</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="nav-logo">
-                <div class="logo">
-                    
+
+    <!-- NAVBAR -->
+    <header class="header">
+        <a href="#home" class="logo">E-PLANET<span>HUB</span></a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#vehicles" class="nav-link">Explore EVs</a>
+            <a href="#compare" class="nav-link">Compare</a>
+            <a href="#charging" class="nav-link">Charging</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PAGE 1: HOME -->
+        <section id="home" class="page active">
+            <div class="hero">
+                <div class="hero-content">
+                    <p class="eyebrow">A BETTER WAY TO MOVE</p>
+                    <h1>The road ahead<br>is <span>electric.</span></h1>
+                    <p class="hero-description">
+                        Discover electric mobility that fits your everyday life.
+                        Explore vehicles, compare features and take your first
+                        step towards a cleaner commute.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#vehicles" class="btn btn-primary">Explore vehicles</a>
+                        <a href="#about" class="btn btn-outline">Our story</a>
+                    </div>
+
+                    <div class="hero-note">
+                        <span><i class="fa-solid fa-car-side"></i></span>
+                        Smarter journeys start with better choices.
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=1200"
+                        alt="Electric vehicle charging"
+                    >
+                    <div class="image-caption">
+                        <span>THE ELECTRIC SHIFT</span>
+                        <strong>Ready when you are.</strong>
+                    </div>
                 </div>
             </div>
+
+            <div class="intro-strip">
+                <div>
+                    <span class="strip-number">01</span>
+                    <h3>Explore</h3>
+                    <p>Find a vehicle that suits your routine.</p>
+                </div>
+                <div>
+                    <span class="strip-number">02</span>
+                    <h3>Compare</h3>
+                    <p>Look at the details before deciding.</p>
+                </div>
+                <div>
+                    <span class="strip-number">03</span>
+                    <h3>Go electric</h3>
+                    <p>Make your next journey count.</p>
+                </div>
+            </div>
+
+            <section class="content-section">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">A GOOD PLACE TO START</p>
+                        <h2>Meet the electric everyday.</h2>
+                    </div>
+                    <a href="#vehicles" class="simple-link">View all vehicles →</a>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon"><i class="fa-brands fa-gg"></i></div>
+                        <h3>Everyday convenience</h3>
+                        <p>Explore options designed around daily travel and city commutes.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                        <h3>Know your numbers</h3>
+                        <p>Compare estimated range, battery capacity and starting prices.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+                        <h3>Charging made clearer</h3>
+                        <p>Understand charging basics and estimate your charging cost.</p>
+                    </article>
+                </div>
+            </section>
+        </section>
+
+
+        <!-- PAGE 2: EXPLORE VEHICLES -->
+        <section id="vehicles" class="page">
+            <div class="page-banner">
+                <p class="eyebrow">FIND YOUR KIND OF DRIVE</p>
+                <h1>Explore electric vehicles.</h1>
+                <p>Different journeys call for different vehicles. Start with a look around.</p>
+            </div>
+
+            <div class="search-box">
+
+    <div class="search-input-wrap">
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+            type="search"
+            id="vehicleSearch"
+            placeholder="Search vehicles..."
+            aria-label="Search vehicles"
+        >
+    </div>
+
+    <select id="vehicleType" aria-label="Filter vehicle type">
+        <option value="all">All vehicles</option>
+        <option value="scooter">Electric scooters</option>
+        <option value="bike">Electric bikes</option>
+        <option value="car">Electric cars</option>
+    </select>
+
+</div>
+
+            <div class="vehicle-grid" id="vehicleGrid"></div>
+        </section>
+
+
+        <!-- PAGE 3: COMPARE -->
+        <section id="compare" class="page">
+            <div class="page-banner">
+                <p class="eyebrow">A LITTLE RESEARCH GOES A LONG WAY</p>
+                <h1>Compare before you choose.</h1>
+                <p>Choose two vehicles to see their sample specifications side by side.</p>
+            </div>
+
+            <div class="compare-box">
+                <div class="compare-selectors">
+                    <div class="form-group">
+                        <label for="vehicleOne">First vehicle</label>
+                        <select id="vehicleOne"></select>
+                    </div>
+
+                    <div class="compare-symbol">VS</div>
+
+                    <div class="form-group">
+                        <label for="vehicleTwo">Second vehicle</label>
+                        <select id="vehicleTwo"></select>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" id="compareButton">Compare vehicles</button>
+
+                <div id="comparisonResult" class="comparison-result">
+                    <p>Select two vehicles and click compare to see their details.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PAGE 4: CHARGING -->
+        <section id="charging" class="page">
+            <div class="page-banner">
+                <p class="eyebrow">POWERING YOUR NEXT JOURNEY</p>
+                <h1>Get familiar with charging.</h1>
+                <p>A quick introduction to charging and a small calculator to estimate the cost.</p>
+            </div>
+
+            <div class="charging-grid">
+                <article class="charging-card">
+                    <span class="charging-number">01</span>
+                    <div class="charging-icon"><i class="fa-solid fa-house"></i></div>
+                    <h3>Home charging</h3>
+                    <p>Charge your vehicle at home using a compatible charging setup. It can be convenient for regular daily use.</p>
+                </article>
+
+                <article class="charging-card">
+                    <span class="charging-number">02</span>
+                    <div class="charging-icon"><i class="fa-solid fa-charging-station"></i></div>
+                    <h3>Public charging</h3>
+                    <p>Public charging points can be useful when travelling or when charging at home is not an option.</p>
+                </article>
+
+                <article class="charging-card">
+                    <span class="charging-number">03</span>
+                    <div class="charging-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+                    <h3>Charging time</h3>
+                    <p>Charging time depends on battery size, charger capacity, vehicle limits and the current battery level.</p>
+                </article>
+            </div>
+
+            <div class="calculator">
+                <div class="calculator-intro">
+                    <p class="eyebrow">A SIMPLE ESTIMATE</p>
+                    <h2>Charging cost calculator.</h2>
+                    <p>Enter the energy you want to charge and your electricity rate.</p>
+                </div>
+
+                <div class="calculator-fields">
+                    <div class="form-group">
+                        <label for="units">Energy required (kWh)</label>
+                        <input type="number" id="units" min="0" step="0.1" placeholder="Example: 5">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rate">Cost per unit (₹)</label>
+                        <input type="number" id="rate" min="0" step="0.1" placeholder="Example: 8">
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" id="calculateButton">Calculate cost</button>
+                <div id="calculationResult" class="calculation-result" aria-live="polite">
+                    Your estimated cost will appear here.
+                </div>
+
+                <p class="disclaimer">
+                    This is a basic estimate. Actual charging costs may include additional
+                    charges and charging losses.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- PAGE 5: ABOUT -->
+        <section id="about" class="page">
+            <div class="page-banner">
+                <p class="eyebrow">A LITTLE ABOUT US</p>
+                <h1>Moving forward, thoughtfully.</h1>
+                <p>We believe choosing electric mobility should feel simpler and more informed.</p>
+            </div>
+
+            <div class="about-layout">
+                <div class="about-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=1000"
+                        alt="Modern two wheeler on a road"
+                    >
+                </div>
+
+                <div class="about-copy">
+                    <p class="eyebrow">OUR STORY</p>
+                    <h2>Small changes can take us a long way.</h2>
+                    <p>
+                        E-Planet Hub is a concept electric mobility platform created to make
+                        exploring EV options easier. From discovering vehicles to
+                        understanding charging, our aim is to bring useful information
+                        together in one place.
+                    </p>
+                    <p>
+                        We are not here to tell everyone which vehicle to buy.
+                        We want people to have a clearer idea of their options before
+                        making a decision.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mission-grid">
+                <div>
+                    <span class="mission-symbol"><i class="fa-solid fa-bullseye"></i></span>
+                    <h3>Our mission</h3>
+                    <p>Make electric mobility information easier to explore and understand.</p>
+                </div>
+                <div>
+                    <span class="mission-symbol"><i class="fa-solid fa-eye-low-vision"></i></span>
+                    <h3>Our vision</h3>
+                    <p>Encourage thoughtful travel choices through awareness and useful tools.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PAGE 6: CONTACT -->
+        <section id="contact" class="page">
+            <div class="page-banner">
+                <p class="eyebrow">LET'S TALK</p>
+                <h1>Have something in mind?</h1>
+                <p>Ask us a question, share feedback or register your interest in a vehicle.</p>
+            </div>
+
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <p class="eyebrow">GET IN TOUCH</p>
+                    <h2>We'd like to hear from you.</h2>
+                    <p>
+                        Use the form to send an enquiry. This demo website will
+                        validate your details and show a confirmation message.
+                    </p>
+
+                    <div class="contact-detail">
+                        <span>✉</span>
+                        <div>
+                            <small>Email</small>
+                            <strong>e.planet@hub</strong>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <span>◷</span>
+                        <div>
+                            <small>Working hours</small>
+                            <strong>Monday – Saturday, 10 AM – 6 PM</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your name</label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interest">What are you interested in?</label>
+                        <select id="interest" required>
+                            <option value="">Choose an option</option>
+                            <option value="Vehicle enquiry">Vehicle enquiry</option>
+                            <option value="Charging information">Charging information</option>
+                            <option value="General question">General question</option>
+                            <option value="Feedback">Feedback</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your message</label>
+                        <textarea id="message" rows="4" placeholder="Write your message..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send enquiry →</button>
+                    <p id="formMessage" class="form-message" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <a href="#home" class="logo">E-planet<span>Hub</span></a>
+        <p>Making electric mobility easier to explore.</p>
+        <div class="footer-links">
+            <a href="#vehicles">Vehicles</a>
+            <a href="#charging">Charging</a>
+            <a href="#contact">Contact</a>
         </div>
-    </header>
+        <small>© 2026 E-planet Hub. Mini project.</small>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
