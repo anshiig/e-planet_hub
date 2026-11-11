@@ -1066,3 +1066,49 @@ textarea:focus {
         width: 100%;
     }
 }
+
+
+/* =========================
+   MOBILE RESPONSIVE - VEHICLES
+========================= */
+
+@media (max-width: 768px) {
+
+    .search-box {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        width: 100%;
+        padding: 0 20px;
+        margin: 25px auto;
+        box-sizing: border-box;
+    }
+
+    .search-input-wrap {
+        flex: 1 1 auto;
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+    }
+
+    .search-input-wrap input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px 15px 15px 45px;
+    }
+
+    .search-input-wrap i {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .search-box select {
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+}
