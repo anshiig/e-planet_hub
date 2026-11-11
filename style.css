@@ -59,6 +59,13 @@ img {
     object-fit: cover;
 }
 
+.logo img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
 
 /* ------------------------------
    2. NAVIGATION
@@ -297,17 +304,19 @@ img {
 
 .image-caption {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 15px;
+    left: 15px;
     background: var(--surface);
-    padding: 17px 22px;
-    min-width: 190px;
+    background-color:honeydew;
+    padding: 15px 19px;
+    min-width: 140px;
+    border-radius: 15px;
 }
 
 .image-caption span {
     display: block;
     color: var(--orange);
-    font-size: 9px;
+    font-size: 8px;
     font-weight: 800;
     letter-spacing: 1px;
 }
@@ -316,9 +325,9 @@ img {
     display: block;
     margin-top: 5px;
     color: var(--dark);
-    font-family: Georgia, serif;
-    font-size: 18px;
-    font-weight: 400;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
 }
 
 .intro-strip {

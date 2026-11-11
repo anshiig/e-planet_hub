@@ -7,22 +7,22 @@ const vehicles = [
     {
         id: 1,
         name: "City Glide S1",
-        type: "scooter",
+        type: "bike",
         price: 95000,
         range: 120,
         battery: "3.2 kWh",
         speed: "80 km/h",
-        image: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=700"
+        image: "https://imgs.search.brave.com/7ui6C2H-Vn6oAfMFuKnfSyKrjCywf0hsrEq9asa-cT4/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMwLmhvdGNhcnNp/bWFnZXMuY29tL3dv/cmRwcmVzcy93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMS8xMS9F/bmVyZ2ljYS1FdmEt/UmliZWxsYS0oTXVy/ZWJlc3QpLmpwZz9x/PTUwJmZpdD1jcm9w/Jnc9ODI1JmRwcj0x/LjU"
     },
     {
         id: 2,
-        name: "Urban Move X",
-        type: "scooter",
-        price: 110000,
-        range: 150,
-        battery: "3.8 kWh",
-        speed: "90 km/h",
-        image: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=700"
+        name: "Eon Compact",
+        type: "car",
+        price: 850000,
+        range: 250,
+        battery: "25 kWh",
+        speed: "110 km/h",
+        image: "https://imgs.search.brave.com/IEM6Vt2ShZDMA2yF2sqtqug7oiXsA-7bB5cBax1P3XM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/a2lhLmNvbS9jb250/ZW50L2RhbS9raWEy/L2luL2VuL291ci12/ZWhpY2xlcy9raWEt/Y2FyZW5zLWNsYXZp/cy1ldi9zaG93cm9v/bS9zLTgvczgtMi5w/bmc"
     },
     {
         id: 3,
@@ -46,13 +46,13 @@ const vehicles = [
     },
     {
         id: 5,
-        name: "Eon Compact",
-        type: "car",
-        price: 850000,
-        range: 250,
-        battery: "25 kWh",
-        speed: "110 km/h",
-        image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=700"
+        name: "Urban Move X",
+        type: "scooter",
+        price: 110000,
+        range: 150,
+        battery: "3.8 kWh",
+        speed: "90 km/h",
+        image: "https://imgs.search.brave.com/W3m28Svp4_BDxZQTadGtPAUpjwXP1SPsqLg4E6laYsQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWct/Y2RuLmV2ZnkuaW4v/RUMtMDZfQmx1aXNo/V2hpdGVfY29sb3Iu/d2VicA"
     },
     {
         id: 6,
@@ -63,7 +63,37 @@ const vehicles = [
         battery: "35 kWh",
         speed: "125 km/h",
         image: "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=700"
-    }
+    },
+    {
+        id: 7,
+        name: "Voltara",
+        type: "scooter",
+        price: 70000,
+        range: 230,
+        battery: "30 kWh",
+        speed: "115 km/h",
+        image: "https://imgs.search.brave.com/mSgaSV2g6njfP1jgHAC0zK8zIDOSh4KehONFH2CJmSk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/YmlrZWRla2hvLmNv/bS9wcm9jZXNzZWRp/bWFnZXMvdHZzL2lx/dWJlLWVsZWN0cmlj/L3NvdXJjZS9pcXVi/ZS1lbGVjdHJpYzY5/Zjg5OTU3ZDI1NzUu/anBn"
+    },
+    {
+        id: 8,
+        name: "Ovia Motors",
+        type: "bike",
+        price: 90000,
+        range: 150,
+        battery: "3.5 kWh",
+        speed: "90 km/h",
+        image: "https://imgs.search.brave.com/b39TeeF040Tpu7f4ZM8PKf42Za8zWgnD6gMxJ5WJbSI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTc4/NzEzNzM3OS9waG90/by92ZXJnZS1tb3Rv/cmN5Y2xlcy1lbGVj/dHJpYy1tb3RvcmN5/Y2xlLWF0LWF1dG9t/b2JpbGl0eS1sYS1h/aGVhZC1vZi10aGUt/bG9zLWFuZ2VsZXMt/YXV0by1zaG93Lmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1x/TzVoVndFMHBsMk0y/OFpoS2NrRVN6T1hv/aW5Hc1hocnB2eWZQ/SnNDelhBPQ"
+    },
+    {
+        id: 9,
+        name: "Maviqo",
+        type: "car",
+        price: 135000,
+        range: 140,
+        battery: "3.7 kWh",
+        speed: "95 km/h",
+        image: "https://imgs.search.brave.com/fmmFzbgZfF64DntSf7YCYfBEz3WRmyxKvsRB5g2lV3I/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMtY2RuLmNhcnMy/NC5jb20vcHJvZC92/ZWhpY2xlcy8yMDI1/LzA4LzI4L0ZlYXR1/cmUlMjBJbWFnZS0z/ZTVjMGEzMC1mYmI5/LTQ1MWMtYjYyZi0z/YmRlNmVlZTg3Mzgu/cG5nP3c9NDIwJmRw/cj0zJm9wdGltaXpl/PWxvdyZmb3JtYXQ9/YXV0byZxdWFsaXR5/PTUw"
+    },
 ];
 
 
